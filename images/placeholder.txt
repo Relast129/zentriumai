@@ -1,0 +1,12 @@
+This directory contains placeholder images for the Zentrium AI website.
+
+For a production website, you would replace these with actual high-quality images:
+
+1. about-image.jpg - Team working on AI solutions
+2. why-us-image.jpg - Visual representation of AI technology
+3. team-member-1.jpg through team-member-5.jpg - Professional headshots of team members
+4. case-study-1.jpg through case-study-3.jpg - Images representing different case studies
+5. testimonial-1.jpg through testimonial-3.jpg - Headshots of clients giving testimonials
+6. brand-1.png through brand-5.png - Logos of client companies
+
+You can use stock photos or custom photography for these images.

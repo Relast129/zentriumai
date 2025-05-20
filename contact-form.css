@@ -1,0 +1,243 @@
+/**
+ * Optimized Contact Form Styles for Zentrium AI
+ * These styles override the default styles to improve performance and user experience
+ */
+
+/* Form Container Optimizations */
+.contact-form-container {
+    will-change: transform;
+    contain: layout style;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Form Optimizations */
+.contact-form {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out !important;
+    will-change: transform, box-shadow;
+    contain: content;
+    transform: translateZ(0);
+}
+
+/* Input Field Optimizations */
+.form-control {
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+    will-change: border-color, box-shadow;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Fast Focus States */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+    outline: none;
+}
+
+/* Submit Button Optimizations */
+#submit-button {
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out !important;
+    will-change: transform, background-color;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optimized Button Hover Effect */
+#submit-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Optimized Button Active Effect */
+#submit-button:active {
+    transform: translateY(1px);
+    transition: transform 0.1s ease-out !important;
+}
+
+/* Optimized Loading Spinner */
+.fa-spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Optimized Form Validation Styles */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: none !important; /* Remove default validation icon for performance */
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+    background-image: none !important; /* Remove default validation icon for performance */
+}
+
+/* Optimized Alert Messages */
+.alert {
+    animation: fadeIn 0.2s ease-out;
+    will-change: opacity, transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optimized Form Layout */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Optimized Checkbox Styles */
+.privacy-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.privacy-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+}
+
+/* Optimized Error States */
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+.form-control.is-invalid + .invalid-feedback {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.privacy-error {
+    color: #dc3545;
+}
+
+/* Optimized Success Message */
+#email-status.alert-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+/* Optimized Error Message */
+#email-status.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+}
+
+/* Optimized Info Message */
+#email-status.alert-info {
+    background-color: rgba(23, 162, 184, 0.1);
+    border-color: rgba(23, 162, 184, 0.2);
+    color: #17a2b8;
+}
+
+/* Optimized Button Content */
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Optimized Button Icon */
+.button-icon {
+    transition: transform 0.2s ease-out;
+}
+
+#submit-button:hover .button-icon {
+    transform: translateX(3px);
+}
+
+/* Optimized Form Placeholder */
+.form-control::placeholder {
+    color: #adb5bd;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-out;
+}
+
+.form-control:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* Optimized Form Label */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease-out;
+}
+
+.form-control:focus + label {
+    color: var(--primary);
+}
+
+/* Optimized Required Field Indicator */
+.required {
+    color: #dc3545;
+    margin-left: 2px;
+}
+
+/* Optimized Form Spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Optimized Textarea */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Optimized Form Transitions */
+.form-control,
+#submit-button,
+.privacy-checkbox input[type="checkbox"] {
+    transition-property: border-color, box-shadow, transform, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+/* Optimized Form Animations */
+@keyframes buttonPulse {
+    0% { box-shadow: 0 0 0 0 rgba(79, 195, 247, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(79, 195, 247, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(79, 195, 247, 0); }
+}
+
+/* Apply pulse animation to submit button */
+#submit-button:not(:disabled) {
+    animation: buttonPulse 2s infinite;
+}
+
+/* Disable animations when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

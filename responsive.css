@@ -1,0 +1,294 @@
+/* Responsive Styles for Zentrium AI Website
+ * This file contains all media queries for responsive design
+ * Ensures compatibility with various devices including mobile, tablet, and desktop
+ */
+
+/* Base Mobile First Approach */
+:root {
+    --container-width: 90%;
+    --container-max-width: 1200px;
+}
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    html {
+        font-size: 14px; /* Slightly smaller base font size for mobile */
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Header & Navigation */
+    .navbar-brand h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero Section */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-image {
+        order: -1; /* Move image above content on mobile */
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-buttons .cta-button {
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-mission {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Team Section */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Why Choose Us Section */
+    .why-us-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Booking Section */
+    .booking-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-cta {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Form Elements */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        width: 90%;
+    }
+    
+    /* Hero Section */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image {
+        order: -1; /* Move image above content on small devices */
+    }
+    
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Team Section */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Hero Section */
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .footer-newsletter {
+        grid-column: span 3;
+        margin-top: 2rem;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: var(--container-max-width);
+    }
+    
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+    header, footer, .chatbot-widget, .back-to-top, .hero-buttons, 
+    .booking-section, .contact-form, .social-media {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .section-title::after, .section-title::before {
+        display: none;
+    }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+    .hero, .full-height {
+        height: -webkit-fill-available;
+    }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #0066cc;
+        --secondary: #6600cc;
+        --text: #000000;
+        --bg: #ffffff;
+        --border: #000000;
+    }
+    
+    .glass {
+        background: white;
+        backdrop-filter: none;
+    }
+    
+    a:focus, button:focus, input:focus, textarea:focus {
+        outline: 2px solid black;
+        outline-offset: 2px;
+    }
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+        --primary: #6c8aff;
+        --primary-light: rgba(108, 138, 255, 0.15);
+        --primary-dark: #5a75e6;
+        --secondary: #b14dff;
+        --secondary-light: rgba(177, 77, 255, 0.15);
+        --secondary-dark: #9a3ddb;
+        --text: #e9ecef;
+        --text-light: #adb5bd;
+        --bg: #121212;
+        --bg-gradient: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+        --card: #1e1e1e;
+        --card-gradient: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+        --border: #2d2d2d;
+    }
+}

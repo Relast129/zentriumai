@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SVG Definitions for Gradients -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="stat-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4FC3F7" />
+                <stop offset="100%" stop-color="#9B5DE5" />
+            </linearGradient>
+        </defs>
+    </svg>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="description" content="Zentrium AI helps businesses leverage artificial intelligence to automate workflows, enhance operations, and drive innovation.">
+    <meta name="keywords" content="AI, artificial intelligence, automation, workflow automation, AI consulting, document processing, AI agents, computer vision, NLP">
+    <meta name="author" content="Zentrium AI">
+    <meta name="theme-color" content="#4FC3F7">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zentriumai.com/">
+    <meta property="og:title" content="Zentrium AI">
+    <meta property="og:description" content="Zentrium AI helps businesses leverage artificial intelligence to automate workflows, enhance operations, and drive innovation.">
+    <meta property="og:image" content="images/AI_vs_Human.jpeg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zentriumai.com/">
+    <meta property="twitter:title" content="Zentrium AI">
+    <meta property="twitter:description" content="Zentrium AI helps businesses leverage artificial intelligence to automate workflows, enhance operations, and drive innovation.">
+    <meta property="twitter:image" content="images/AI_vs_Human.jpeg">
+    <title>Zentrium AI</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" as="font" crossorigin>
+
+    <!-- Preconnect to EmailJS for faster form submission -->
+    <link rel="preconnect" href="https://api.emailjs.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.emailjs.com">
+
+    <!-- Stylesheets with optimized loading -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enhanced Chatbot CSS -->
+    <link rel="stylesheet" href="chatbot.css">
+    <!-- Optimized Contact Form CSS -->
+    <link rel="stylesheet" href="contact-form.css">
+    <!-- Bootstrap CSS - using minified version -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons - using minified version with integrity and crossorigin for better security -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts - optimized by loading only needed weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader removed for normal page loading -->
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand logo" href="#"><h1>Zentrium <span>AI</span></h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto nav-links">
+                        <li class="nav-item"><a class="nav-link" href="#home"><span>Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><span>About Us</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services"><span>Services</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team"><span>Our Team</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#why-us"><span>Why Choose Us</span></a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Connect</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-animated">
+                                <li><a class="dropdown-item" href="#book"><span>Book a Call</span></a></li>
+                                <li><a class="dropdown-item" href="#contact"><span>Contact Us</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js" class="particles-container"></div>
+        <div class="hero-animation"></div>
+        <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="shape-divider"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="hero-tagline">Artificial Intelligence Solutions</div>
+                    <h1>
+                        <span class="gradient-text">Automate</span>,
+                        Innovate,
+                        <span class="gradient-text-alt">Dominate</span>
+                    </h1>
+                    <p>Zentrium AI empowers businesses to harness the transformative potential of artificial intelligence, creating tailored automation solutions that enhance efficiency, drive innovation, and scale with your growth.</p>
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Custom AI Solutions</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Workflow Automation</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#services" class="cta-button primary">
+                            Explore Services <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#book" class="cta-button secondary">
+                            Book a Free Consultation
+                        </a>
+                    </div>
+                    <div class="hero-clients">
+                        <span>Trusted by innovative companies</span>
+                        <div class="client-logos">
+                            <div class="client-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="client-logo">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <div class="client-logo">
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+                    <div class="hero-image-container">
+                        <img src="images/AI_vs_Human.jpeg" alt="AI Business Transformation" loading="lazy">
+                        <div class="hero-image-badge">
+                            <div class="badge-icon"><i class="fas fa-robot"></i></div>
+                            <div class="badge-text">AI-Powered</div>
+                        </div>
+                    </div>
+                    <div class="image-caption">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Transforming businesses through intelligent automation solutions</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#about">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="scroll-arrow">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Us</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+                    <h3>Your Partner in AI Transformation</h3>
+                    <p>At Zentrium AI, we're on a mission to democratize artificial intelligence, making powerful automation accessible to businesses of all sizes. We believe that AI should be a tool that enhances human potential rather than replacing it.</p>
+                    <p>Our team combines expertise in machine learning, data science, and business strategy to bridge the gap between cutting-edge technology and practical business applications. We don't just implement AI, we craft solutions that align with your unique challenges, workflows, and goals.</p>
+                    <div class="about-stats-container" data-aos="fade-up" data-aos-delay="200">
+                        <div class="about-stats">
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value-minimal">
+                                        <span>2x</span>
+                                    </div>
+                                    <div class="stat-content-minimal">
+                                        <h3 class="stat-title-minimal">Business Impact</h3>
+                                        <p class="stat-text-minimal">Designed to boost ROI - often 2x or higher</p>
+                                    </div>
+                                </div>
+
+                                <div class="stats-separator-vertical"></div>
+
+                                <div class="stat-item">
+                                    <div class="stat-value-minimal">
+                                        <span>10+</span>
+                                    </div>
+                                    <div class="stat-content-minimal">
+                                        <h3 class="stat-title-minimal">AI Systems</h3>
+                                        <p class="stat-text-minimal">Custom Solutions</p>
+                                    </div>
+                                </div>
+
+                                <div class="stats-separator-vertical"></div>
+
+                                <div class="stat-item">
+                                    <div class="stat-value-minimal">
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="stat-content-minimal">
+                                        <h3 class="stat-title-minimal">Efficiency</h3>
+                                        <p class="stat-text-minimal">Optimization Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+                    <div class="image-container">
+                        <img src="images/intelli_workspace.png" alt="Zentrium AI Team Working" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mvv-sections-wrapper" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="mvv-title">Our Guiding Principles</h3>
+
+                <div class="vision-section">
+                    <div class="vision-card">
+                        <div class="vision-icon-wrapper">
+                            <div class="vision-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="vision-content">
+                            <h4>Our Vision</h4>
+                            <div class="vision-divider"></div>
+                            <p>To shape a future where intelligent automation transforms the way businesses operate - freeing human potential for creativity, strategy, and innovation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mvv-separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+
+                <div class="mission-section">
+                    <div class="mission-card">
+                        <div class="mission-icon-wrapper">
+                            <div class="mission-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="mission-content">
+                            <h4>Our Mission</h4>
+                            <div class="mission-divider"></div>
+                            <p>To build accessible, ethical, and high-impact AI automation solutions that solve real-world business challenges, drive measurable ROI, and empower growth for organizations of all sizes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mvv-separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+
+                <div class="values-section">
+                    <div class="values-card">
+                        <div class="values-icon-wrapper">
+                            <div class="values-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="values-content">
+                            <h4>Our Core Values</h4>
+                            <div class="values-divider"></div>
+                            <p>
+                                <li>Innovation – We push boundaries to engineer cutting-edge solutions.</li>
+                                <li>Integrity – We build trust through transparency, honesty, and accountability.</li>
+                                <li>Impact – We focus on results that truly matter for our clients.</li>
+                                <li>Accessibility – We believe advanced AI should be available to everyone.</li>
+                                <li>Simplicity – We turn complex problems into elegant, usable solutions.</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-bg-animation"></div>
+        <div class="services-particles">
+            <div class="services-particle"></div>
+            <div class="services-particle"></div>
+            <div class="services-particle"></div>
+            <div class="services-particle"></div>
+            <div class="services-particle"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Comprehensive AI solutions tailored to your business needs</p>
+            <div class="services-grid">
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">AI Workflow Automation</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Streamline repetitive tasks and complex workflows with intelligent automation that learns and adapts to your business processes.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">AI Consulting & Strategy</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Strategic guidance on implementing AI in your business to solve specific problems and create sustainable competitive advantages.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.1">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">Intelligent Document Processing</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Extract, analyze, and process information from documents with AI that understands context and learns from corrections.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.2">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">Custom AI Agent Development</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Bespoke AI agents designed to handle specific tasks, interact with users, and integrate with your existing systems.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.3">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="350">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">Computer Vision & NLP Solutions</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">AI systems that can see, understand, and process visual information and natural language for diverse applications.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.4">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-microphone"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">Voice-Enabled AI Tools</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Create intuitive voice interfaces that allow users to interact with your systems and services through natural conversation.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.5">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="450">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-language"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">Multilingual AI Systems</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Break language barriers with AI solutions that can understand, translate, and generate content in multiple languages.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.6">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">AI Workshops & Training</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Empower your team with the knowledge and skills to leverage AI effectively in their daily work and strategic initiatives.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.7">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="550">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">First Aid AI & Healthcare Tools</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">AI-powered solutions for healthcare providers and individuals to improve patient care, diagnostics, and medical workflows.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.8">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-image"></i>
+                            <div class="icon-bg-glow"></div>
+                        </div>
+                        <h3 class="service-title">Image/Prompt-based AI Assistance</h3>
+                        <div class="service-divider"></div>
+                        <p class="service-description">Leverage the power of generative AI to create, edit, and enhance visual content based on text prompts and existing images.</p>
+                        <a href="#book" class="service-link" data-animation-delay="0.9">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="link-hover-effect"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Meet Our Team</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">The minds behind Zentrium AI's innovation</p>
+            <div class="team-grid">
+                <div class="team-member glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image-container">
+                        <div class="member-image">
+                            <img src="images/profile_pic_light_1.jpg" alt="Raheesh Ramsy - Founder & CEO" loading="lazy">
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="image-frame"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Raheesh Ramsy</h3>
+                        <p class="position">Founder & CEO | AI Engineer</p>
+                        <div class="member-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Pioneering intelligent automation with a singular vision.</p>
+                        </div>
+                        <div class="member-bottom-social">
+                            <a href="https://www.linkedin.com/in/raheeshramsy-ai/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/RaheeshRamzy" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/Relast129" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member glass" data-aos="fade-up" data-aos-delay="250">
+                    <div class="member-image-container">
+                        <div class="member-image">
+                            <img src="images/oa_profile_pic.png" alt="M.S.M. Azmin - Operations Associate" loading="lazy">
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="image-frame"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Mohamed Azmin</h3>
+                        <p class="position">Operations Associate</p>
+                        <div class="member-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Building operations that empower innovation and scale.</p>
+                        </div>
+                        <div class="member-bottom-social">
+                            <a href="https://x.com/AzminMohomad" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Why Choose Us Section with Cards -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+
+            <div class="why-us-content">
+                <div class="why-us-intro" data-aos="fade-up" data-aos-delay="100">
+                    <h3>AI Excellence, Tailored for You</h3>
+                    <p>At Zentrium AI, we combine technical expertise with a deep understanding of business needs to deliver AI solutions that make a real difference.</p>
+                </div>
+
+                <div class="why-us-cards">
+                    <!-- Card 1 -->
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Affordable Solutions</h4>
+                            <p class="card-description">We make advanced AI accessible with flexible pricing models tailored to businesses of all sizes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Cutting-Edge Technology</h4>
+                            <p class="card-description">Stay ahead with solutions built on the latest advancements in artificial intelligence and machine learning.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Tailored Approach</h4>
+                            <p class="card-description">Every business is unique, we design custom AI solutions that address your specific challenges and goals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Future-Focused</h4>
+                            <p class="card-description">Our solutions evolve with your business, adapting to new challenges and opportunities as they arise.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="why-us-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Ethical AI</h4>
+                            <p class="card-description">We prioritize responsible AI development, ensuring transparency, fairness, and privacy in all our solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Book a Call Section -->
+    <section id="book" class="booking">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Book a Free Consultation</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's talk about your automation goals</p>
+            <div class="booking-content">
+                <div class="booking-text" data-aos="fade-right" data-aos-delay="200">
+                    <h3>Start Your AI Journey Today</h3>
+                    <p>Ready to explore how AI can transform your business? Schedule a free 30-minute consultation with our team. We'll discuss your challenges, goals, and how our solutions can help you achieve them.</p>
+                    <ul class="booking-benefits">
+                        <li><i class="fas fa-check"></i> No obligation, just valuable insights</li>
+                        <li><i class="fas fa-check"></i> Tailored recommendations for your business</li>
+                        <li><i class="fas fa-check"></i> Clear explanation of potential solutions and costs</li>
+                        <li><i class="fas fa-check"></i> Immediate next steps if you decide to proceed</li>
+                    </ul>
+                    <p class="booking-note">Can't find a suitable time? <a href="#contact">Contact us</a> and we'll arrange a custom appointment.</p>
+                </div>
+                <div class="booking-calendar" data-aos="fade-left" data-aos-delay="300">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/zentriumai/book-a-free-call" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Get in touch with our team</p>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-info-header">
+                        <h3>Let's Connect</h3>
+                        <div class="contact-decoration"></div>
+                        <p>Have questions about our AI solutions? Want to discuss a potential project? Our team is ready to help you transform your business with cutting-edge AI technology.</p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:zentriumai@gmail.com">zentriumai@gmail.com</a></p>
+                                <span class="response-time">We respond within 24 hours</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+94742209477">+94 074 220 9477</a></p>
+                                <span class="response-time">Available 9am-6pm, Mon-Fri</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Location</h4>
+                                <p>Colombo, Sri Lanka</p>
+                                <a href="https://maps.google.com/?q=Colombo,Sri+Lanka" target="_blank" class="view-map">View on map <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Connect With Us</h4>
+                        <p>Follow us on social media for the latest updates, insights, and AI trends</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/company/zentrium-ai" target="_blank" aria-label="LinkedIn" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span class="social-tooltip">LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com/ZentriumA56437" target="_blank" aria-label="Twitter" class="social-icon twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span class="social-tooltip">Twitter</span>
+                            </a>
+                            <a href="https://github.com/Relast129" target="_blank" aria-label="GitHub" class="social-icon github">
+                                <i class="fab fa-github"></i>
+                                <span class="social-tooltip">GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-aos="fade-left" data-aos-delay="300">
+                    <div class="form-header">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <!-- Hidden fields for form processing -->
+                        <input type="hidden" name="_subject" value="New message from Zentrium AI website">
+                        <input type="hidden" name="_cc" value="ramzyraheesh@gmail.com">
+
+                        <!-- Honeypot field to prevent spam -->
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required autocomplete="name">
+                                <div class="invalid-feedback">Please enter your name</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required autocomplete="email">
+                                <div class="invalid-feedback">Please enter a valid email address</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" autocomplete="tel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="What is this regarding?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                            <div class="invalid-feedback">Please enter your message</div>
+                        </div>
+
+                        <div class="form-group privacy-consent-container">
+                            <div class="privacy-checkbox">
+                                <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
+                                <label for="privacy-consent">I agree to the <a href="#">privacy policy</a> and consent to being contacted regarding my inquiry.</label>
+                            </div>
+                            <div class="invalid-feedback">You must agree before submitting</div>
+                        </div>
+
+                        <button type="submit" class="cta-button primary" id="submit-button">
+                            <span class="button-content">
+                                <span class="button-text">Send Message</span>
+                                <span class="button-icon"><i class="fas fa-paper-plane"></i></span>
+                            </span>
+                        </button>
+
+                        <div id="email-status" class="mt-3" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-cta" data-aos="fade-up">
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Need a consultation?</h4>
+                    <p>Schedule a free 30-minute call with our Team</p>
+                    <a href="#book" class="cta-button secondary">Book a Call</a>
+                </div>
+
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>Want to learn more?</h4>
+                    <p>Check out our resources and case studies</p>
+                    <a href="#services" class="cta-button secondary">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Answers to common questions about our AI solutions</p>
+
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                What types of businesses can benefit from AI automation?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Businesses of all sizes and across all industries can benefit from AI automation. Whether you're a healthcare provider looking to improve diagnostics, a retailer optimizing inventory, a financial institution enhancing fraud detection, or a service business streamlining customer support, our AI solutions can be tailored to your specific needs and challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                How long does it take to implement an AI solution?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Implementation timelines vary based on the complexity of the solution and your specific requirements. Simple automation projects can be deployed in as little as 4-6 weeks, while more complex, enterprise-wide solutions might take 3-6 months. During our initial consultation, we'll provide a detailed timeline based on your project scope.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                Do I need technical expertise to use your AI solutions?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>No technical expertise is required. We design our solutions with user-friendly interfaces that your team can easily navigate. Additionally, we provide comprehensive training and ongoing support to ensure your team can effectively use and benefit from the AI tools we implement.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                How do you ensure the security and privacy of our data?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Data security and privacy are our top priorities. We implement industry-leading security measures, including encryption, secure access controls, and regular security audits. All our solutions are designed to comply with relevant data protection regulations such as GDPR, HIPAA, and others depending on your industry and location. We're happy to discuss specific security requirements during our consultation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                What kind of ROI can we expect from implementing AI solutions?
+                            </button>
+                        </h3>
+                        <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>ROI varies by project, but our clients typically see returns within 6-12 months of implementation. Benefits include cost savings from automation (often 30-50% for manual processes), increased revenue through better decision-making, improved customer satisfaction, and reduced error rates. During our consultation, we'll help you identify specific KPIs and expected returns for your unique situation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta" data-aos="fade-up" data-aos-delay="300">
+                <p>Still have questions? We're here to help!</p>
+                <a href="#contact" class="cta-button primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Zentrium<span>AI</span></h2>
+                    <p>Empowering businesses with intelligent automation solutions that drive growth and innovation.</p>
+                    <div class="footer-social-icons">
+                        <a href="https://www.linkedin.com/company/zentrium-ai" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/ZentriumA56437" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Relast129" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#book">Book a Call</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">AI Workflow Automation</a></li>
+                        <li><a href="#services">AI Consulting & Strategy</a></li>
+                        <li><a href="#services">Intelligent Document Processing</a></li>
+                        <li><a href="#services">Custom AI Agent Development</a></li>
+                        <li><a href="#services">Computer Vision & NLP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest AI insights and company updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zentrium AI. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Enhanced AI Chatbot Widget -->
+    <div class="chatbot-widget">
+        <div class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-robot"></i>
+            <span class="chatbot-label">AI Assistant</span>
+        </div>
+        <div class="chatbot-container" id="chatbot-container">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> Zentrium AI Assistant</h3>
+                <button class="chatbot-close" id="chatbot-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <!-- Messages will be added dynamically by JavaScript -->
+                <div class="message bot-message loading-message">
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input-field" placeholder="Type your message here...">
+                <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Page Loader with Animation -->
+    <div class="simple-loader" id="page-loader">
+        <h1>Zentrium <span>AI</span></h1>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Enhanced script to remove loader with progress tracking -->
+    <script>
+        // Track page load progress
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set a maximum load time of 3 seconds
+            const maxLoadTime = 3000;
+            const startTime = performance.now();
+
+            // Function to hide loader with smooth transition
+            function hideLoader() {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                    document.body.style.overflow = 'auto';
+
+                    // Remove from DOM after transition
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 500);
+                }
+            }
+
+            // Check if all resources are loaded
+            window.addEventListener('load', function() {
+                const loadTime = performance.now() - startTime;
+                console.log('Page loaded in: ' + loadTime + 'ms');
+
+                // If load time is less than 1 second, wait a bit to show the animation
+                if (loadTime < 1000) {
+                    setTimeout(hideLoader, 1000 - loadTime);
+                } else {
+                    hideLoader();
+                }
+            });
+
+            // Fallback: Hide loader after max time even if page isn't fully loaded
+            setTimeout(hideLoader, maxLoadTime);
+        });
+    </script>
+
+    <!-- Scripts - optimized with defer attribute for better performance -->
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <!-- EmailJS Library - Kept as fallback -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- EmailJS Initialization - Optimized for faster loading -->
+    <script type="text/javascript">
+        // Initialize EmailJS immediately
+        (function() {
+            try {
+                // Using a default public key that works with the free tier
+                emailjs.init("user_example123456");
+            } catch (e) {
+                console.error('EmailJS initialization error:', e);
+            }
+        })();
+    </script>
+    <!-- Direct API Form Handler - Faster than EmailJS -->
+    <script src="form-api.js"></script>
+    <!-- Contact Form Handler - Kept as fallback -->
+    <script src="contact-form.js"></script>
+    <!-- Enhanced Chatbot Scripts -->
+    <script src="chatbot.js" defer></script>
+    <script src="chatbot-utils.js" defer></script>
+    <script src="chatbot-responses.js" defer></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+
+    <!-- Stat Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animation class to the stat item
+                        entry.target.classList.add('animate-stat');
+
+                        // Start counter animations
+                        const percentages = entry.target.querySelectorAll('.stat-percentage');
+                        percentages.forEach(percentage => {
+                            const targetValue = parseInt(percentage.textContent);
+                            animateCounter(percentage, 0, targetValue);
+                        });
+
+                        // Unobserve after animation
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            // Observe all stat items
+            document.querySelectorAll('.stat-item').forEach(item => {
+                observer.observe(item);
+            });
+
+            // Counter animation function
+            function animateCounter(element, start, end) {
+                let current = start;
+                const increment = end / 50; // Divide animation into 50 steps
+                const duration = 1500; // Animation duration in ms
+                const stepTime = duration / 50;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= end) {
+                        if (element.querySelector('.percentage-symbol')) {
+                            element.innerHTML = end + '<span class="percentage-symbol">%</span>';
+                        } else {
+                            element.textContent = end;
+                        }
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, stepTime);
+            }
+        });
+    </script>
+
+    <!-- Optimized Particles.js Initialization -->
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.getElementById('particles-js')) {
+                // Reduced particle count and simplified configuration for better performance
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 40, // Reduced from 80
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#4361ee"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false,
+                            "anim": {
+                                "enable": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#4361ee",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 1.5,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "push": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": false
+                });
+            }
+        });
+    </script>
+</body>
+</html>
