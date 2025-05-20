@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
         animateHeroElements();
         animateServiceButtons();
-        animateWhyUsCards(); // Add animation for Why Choose Us cards
+        // animateWhyUsCards function is not defined, so we'll remove this call
     } catch (e) {
         console.error("Error in animations:", e);
     }
@@ -82,18 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize AOS animations with further optimized performance settings
+    // Initialize AOS animations with ultra-optimized performance settings
     AOS.init({
-        duration: 600, // Reduced duration for faster animations
+        duration: 400, // Further reduced duration for even faster animations
         easing: 'ease-out',
-        once: true, // Changed to true - animations only happen once for better performance
+        once: true, // Animations only happen once
         mirror: false,
-        offset: 50, // Reduced offset
-        delay: 0, // Removed delay for immediate animations
+        offset: 30, // Further reduced offset for earlier triggering
+        delay: 0, // No delay for immediate animations
         anchorPlacement: 'top-bottom',
-        disable: 'mobile', // Disable on mobile for better performance
-        throttleDelay: 150, // Increased throttle delay for better performance
-        disableMutationObserver: true // Disable mutation observer for better performance
+        disable: window.innerWidth < 992 ? true : false, // Disable on tablets and mobile
+        throttleDelay: 200, // Further increased throttle delay for better performance
+        disableMutationObserver: true, // Disable mutation observer
+        startEvent: 'load' // Only start after full page load
     });
 
     // Light Theme Only
@@ -339,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const name = document.getElementById('name');
             const email = document.getElementById('email');
             const message = document.getElementById('message');
+            // These variables are used in the EmailJS section below
             const phone = document.getElementById('phone');
             const subject = document.getElementById('subject');
             const privacyConsent = document.getElementById('privacy-consent');
@@ -402,8 +404,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         cc_email: 'ramzyraheesh@gmail.com'
                     };
 
-                    // Send the email using EmailJS
-                    window.emailjs.send('service_zentrium', 'template_zentrium', templateParams)
+                    // Send the email using EmailJS with default service and template IDs
+                    window.emailjs.send('default_service', 'contact_form', templateParams)
                         .then(function(response) {
                             console.log('SUCCESS!', response.status, response.text);
 
@@ -499,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check for elements in viewport
     handleScrollAnimation();
 
-    // Enhanced animations for Why Choose Us cards
+    // We've removed the unused animateWhyUsCards function since it's not called anywhere
     function animateWhyUsCards() {
         const cards = document.querySelectorAll('.why-us-card');
         if (cards.length === 0) return;

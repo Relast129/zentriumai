@@ -153,7 +153,7 @@ function sendEmailFast() {
         };
 
         // Use Promise.race to implement a timeout for EmailJS
-        const emailPromise = window.emailjs.send('service_zentrium', 'template_zentrium', templateParams);
+        const emailPromise = window.emailjs.send('default_service', 'contact_form', templateParams);
         const timeoutPromise = new Promise((_, reject) => {
             setTimeout(() => reject(new Error('Request timed out')), 8000); // 8 second timeout
         });

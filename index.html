@@ -11,14 +11,20 @@
         </defs>
     </svg>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="description" content="Zentrium AI helps businesses leverage artificial intelligence to automate workflows, enhance operations, and drive innovation.">
     <meta name="keywords" content="AI, artificial intelligence, automation, workflow automation, AI consulting, document processing, AI agents, computer vision, NLP">
     <meta name="author" content="Zentrium AI">
     <meta name="theme-color" content="#4FC3F7">
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo.ico">
+    <!-- Additional favicon formats for better cross-browser support -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.ico">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zentriumai.com/">
@@ -33,29 +39,39 @@
     <meta property="twitter:image" content="images/AI_vs_Human.jpeg">
     <title>Zentrium AI</title>
 
-    <!-- Preload critical resources -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" as="font" crossorigin>
-
-    <!-- Preconnect to EmailJS for faster form submission -->
+    <!-- Critical preconnects for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://api.emailjs.com" crossorigin>
+
+    <!-- DNS prefetch for even faster loading -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://api.emailjs.com">
 
-    <!-- Stylesheets with optimized loading -->
+    <!-- Preload only the most critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="images/logo.ico" as="image" type="image/x-icon">
+
+    <!-- Critical CSS first -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Enhanced Chatbot CSS -->
-    <link rel="stylesheet" href="chatbot.css">
-    <!-- Optimized Contact Form CSS -->
-    <link rel="stylesheet" href="contact-form.css">
-    <!-- Bootstrap CSS - using minified version -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons - using minified version with integrity and crossorigin for better security -->
+
+    <!-- Font Awesome with reduced CSS size -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google Fonts - optimized by loading only needed weights -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Non-critical CSS loaded with lower priority -->
+    <link rel="stylesheet" href="chatbot.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="contact-form.css" media="print" onload="this.media='all'">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 <body>
     <!-- Loader removed for normal page loading -->
@@ -150,7 +166,7 @@
                 </div>
                 <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
                     <div class="hero-image-container">
-                        <img src="images/AI_vs_Human.jpeg" alt="AI Business Transformation" loading="lazy">
+                        <img src="images/AI_vs_Human.jpeg" alt="AI Business Transformation" loading="eager" fetchpriority="high" width="600" height="400" decoding="async">
                         <div class="hero-image-badge">
                             <div class="badge-icon"><i class="fas fa-robot"></i></div>
                             <div class="badge-text">AI-Powered</div>
@@ -230,7 +246,7 @@
                 </div>
                 <div class="about-image" data-aos="fade-left" data-aos-delay="200">
                     <div class="image-container">
-                        <img src="images/intelli_workspace.png" alt="Zentrium AI Team Working" loading="lazy">
+                        <img src="images/intelli_workspace.png" alt="Zentrium AI Team Working" loading="lazy" width="500" height="350" decoding="async">
                     </div>
                 </div>
             </div>
@@ -291,13 +307,13 @@
                         <div class="values-content">
                             <h4>Our Core Values</h4>
                             <div class="values-divider"></div>
-                            <p>
+                            <ul class="values-list">
                                 <li>Innovation – We push boundaries to engineer cutting-edge solutions.</li>
                                 <li>Integrity – We build trust through transparency, honesty, and accountability.</li>
                                 <li>Impact – We focus on results that truly matter for our clients.</li>
                                 <li>Accessibility – We believe advanced AI should be available to everyone.</li>
                                 <li>Simplicity – We turn complex problems into elegant, usable solutions.</li>
-                            </p>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -492,7 +508,7 @@
                 <div class="team-member glass" data-aos="fade-up" data-aos-delay="200">
                     <div class="member-image-container">
                         <div class="member-image">
-                            <img src="images/profile_pic_light_1.jpg" alt="Raheesh Ramsy - Founder & CEO" loading="lazy">
+                            <img src="images/profile_pic_light_1.jpg" alt="Raheesh Ramsy - Founder & CEO" loading="lazy" width="300" height="300" decoding="async">
                             <div class="image-glow"></div>
                         </div>
                         <div class="image-frame"></div>
@@ -972,220 +988,281 @@
         </div>
     </div>
 
-    <!-- Enhanced Page Loader with Animation -->
-    <div class="simple-loader" id="page-loader">
-        <h1>Zentrium <span>AI</span></h1>
-        <div class="loader-bar"></div>
+    <!-- Modern Page Loader with 3-second Animation -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <h1>Zentrium <span>AI</span></h1>
+            </div>
+            <div class="loader-animation">
+                <div class="loader-circle"></div>
+                <div class="loader-progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="loader-text">
+                <p>Powering up AI solutions...</p>
+            </div>
+        </div>
     </div>
 
-    <!-- Enhanced script to remove loader with progress tracking -->
+    <!-- Loader removal script with 3-second animation -->
     <script>
-        // Track page load progress
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set a maximum load time of 3 seconds
-            const maxLoadTime = 3000;
-            const startTime = performance.now();
+        // Animate and remove loader after 3 seconds
+        (function() {
+            const loader = document.getElementById('page-loader');
+            const progressFill = document.querySelector('.progress-fill');
+            const loaderText = document.querySelector('.loader-text p');
+            const messages = [
+                "Initializing AI systems...",
+                "Loading intelligent solutions...",
+                "Preparing your experience..."
+            ];
 
-            // Function to hide loader with smooth transition
-            function hideLoader() {
-                const loader = document.getElementById('page-loader');
-                if (loader) {
-                    loader.style.opacity = '0';
-                    loader.style.visibility = 'hidden';
-                    document.body.style.overflow = 'auto';
+            if (loader && progressFill) {
+                // Start with body overflow hidden
+                document.body.style.overflow = 'hidden';
 
-                    // Remove from DOM after transition
-                    setTimeout(() => {
-                        loader.remove();
-                    }, 500);
-                }
+                // Animate progress bar
+                progressFill.style.width = '0%';
+
+                // Start animation sequence
+                let progress = 0;
+                const totalDuration = 2800; // slightly less than 3s to ensure completion
+                const interval = 50; // update every 50ms
+                const increment = 100 / (totalDuration / interval);
+
+                const progressTimer = setInterval(() => {
+                    progress += increment;
+
+                    // Update progress bar
+                    progressFill.style.width = `${Math.min(progress, 100)}%`;
+
+                    // Update text at certain points
+                    if (progress > 30 && progress < 35) {
+                        loaderText.textContent = messages[0];
+                    } else if (progress > 60 && progress < 65) {
+                        loaderText.textContent = messages[1];
+                    } else if (progress > 85 && progress < 90) {
+                        loaderText.textContent = messages[2];
+                    }
+
+                    // When complete
+                    if (progress >= 100) {
+                        clearInterval(progressTimer);
+
+                        // Fade out loader
+                        loader.classList.add('fade-out');
+
+                        // Remove from DOM after fade transition
+                        setTimeout(() => {
+                            loader.remove();
+                            document.body.style.overflow = 'auto';
+                        }, 300);
+                    }
+                }, interval);
             }
-
-            // Check if all resources are loaded
-            window.addEventListener('load', function() {
-                const loadTime = performance.now() - startTime;
-                console.log('Page loaded in: ' + loadTime + 'ms');
-
-                // If load time is less than 1 second, wait a bit to show the animation
-                if (loadTime < 1000) {
-                    setTimeout(hideLoader, 1000 - loadTime);
-                } else {
-                    hideLoader();
-                }
-            });
-
-            // Fallback: Hide loader after max time even if page isn't fully loaded
-            setTimeout(hideLoader, maxLoadTime);
-        });
+        })();
     </script>
 
-    <!-- Scripts - optimized with defer attribute for better performance -->
-    <!-- Bootstrap JS Bundle with Popper -->
+    <!-- Performance optimization script - loaded first for immediate optimizations -->
+    <script src="performance.js"></script>
+
+    <!-- Critical scripts loaded with high priority -->
+    <!-- Bootstrap JS Bundle with Popper - essential for navigation -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- AOS Animation Library -->
+
+    <!-- Particles.js for hero section animations -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+
+    <!-- Core functionality script -->
+    <script src="script.js" defer></script>
+
+    <!-- Non-critical scripts loaded with lower priority -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <!-- EmailJS Library - Kept as fallback -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" async></script>
+
+    <!-- EmailJS loaded with proper initialization -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <!-- EmailJS Initialization - Optimized for faster loading -->
-    <script type="text/javascript">
-        // Initialize EmailJS immediately
+    <script>
+        // Initialize EmailJS immediately with a public key
         (function() {
             try {
-                // Using a default public key that works with the free tier
-                emailjs.init("user_example123456");
+                emailjs.init("public_key"); // Replace with your actual public key when you set up EmailJS
+                console.log("EmailJS initialized successfully");
             } catch (e) {
                 console.error('EmailJS initialization error:', e);
             }
         })();
     </script>
-    <!-- Direct API Form Handler - Faster than EmailJS -->
-    <script src="form-api.js"></script>
-    <!-- Contact Form Handler - Kept as fallback -->
-    <script src="contact-form.js"></script>
-    <!-- Enhanced Chatbot Scripts -->
+
+    <!-- Form handling scripts loaded with lower priority -->
+    <script src="form-api.js" defer></script>
+    <script src="contact-form.js" defer></script>
+
+    <!-- Chatbot scripts loaded last as they're not critical -->
     <script src="chatbot.js" defer></script>
     <script src="chatbot-utils.js" defer></script>
     <script src="chatbot-responses.js" defer></script>
-    <!-- Custom JS -->
-    <script src="script.js" defer></script>
 
-    <!-- Stat Animation Script -->
+    <!-- Optimized Stat Animation Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate stats when they come into view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Add animation class to the stat item
-                        entry.target.classList.add('animate-stat');
+        // Delay stat animations until after page load
+        window.addEventListener('load', function() {
+            // Use requestIdleCallback for non-critical operations
+            (window.requestIdleCallback || window.setTimeout)(function() {
+                // Simplified animation with fewer steps
+                const statItems = document.querySelectorAll('.stat-item');
+                if (statItems.length === 0) return;
 
-                        // Start counter animations
-                        const percentages = entry.target.querySelectorAll('.stat-percentage');
-                        percentages.forEach(percentage => {
-                            const targetValue = parseInt(percentage.textContent);
-                            animateCounter(percentage, 0, targetValue);
-                        });
+                // Use a more efficient observer with fewer options
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Add animation class
+                            entry.target.classList.add('animate-stat');
 
-                        // Unobserve after animation
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
+                            // Immediately set final values for better performance
+                            const percentages = entry.target.querySelectorAll('.stat-percentage');
+                            percentages.forEach(percentage => {
+                                const targetValue = parseInt(percentage.textContent);
+                                // Skip animation on mobile devices
+                                if (window.innerWidth <= 768) {
+                                    if (percentage.querySelector('.percentage-symbol')) {
+                                        percentage.innerHTML = targetValue + '<span class="percentage-symbol">%</span>';
+                                    } else {
+                                        percentage.textContent = targetValue;
+                                    }
+                                } else {
+                                    // Simplified animation with fewer steps for desktop
+                                    animateCounter(percentage, 0, targetValue);
+                                }
+                            });
 
-            // Observe all stat items
-            document.querySelectorAll('.stat-item').forEach(item => {
-                observer.observe(item);
-            });
-
-            // Counter animation function
-            function animateCounter(element, start, end) {
-                let current = start;
-                const increment = end / 50; // Divide animation into 50 steps
-                const duration = 1500; // Animation duration in ms
-                const stepTime = duration / 50;
-
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= end) {
-                        if (element.querySelector('.percentage-symbol')) {
-                            element.innerHTML = end + '<span class="percentage-symbol">%</span>';
-                        } else {
-                            element.textContent = end;
+                            // Unobserve after animation
+                            observer.unobserve(entry.target);
                         }
-                        clearInterval(timer);
-                    } else {
-                        element.textContent = Math.floor(current);
-                    }
-                }, stepTime);
-            }
+                    });
+                }, {
+                    threshold: 0.1, // Lower threshold for earlier triggering
+                    rootMargin: '50px' // Trigger earlier
+                });
+
+                // Observe all stat items
+                statItems.forEach(item => observer.observe(item));
+
+                // Simplified counter animation function
+                function animateCounter(element, start, end) {
+                    let current = start;
+                    // Fewer steps for faster animation
+                    const steps = 20;
+                    const increment = end / steps;
+                    const duration = 800; // Shorter duration
+                    const stepTime = duration / steps;
+
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= end) {
+                            if (element.querySelector('.percentage-symbol')) {
+                                element.innerHTML = end + '<span class="percentage-symbol">%</span>';
+                            } else {
+                                element.textContent = end;
+                            }
+                            clearInterval(timer);
+                        } else {
+                            element.textContent = Math.floor(current);
+                        }
+                    }, stepTime);
+                }
+            }, { timeout: 1000 });
         });
     </script>
 
-    <!-- Optimized Particles.js Initialization -->
+    <!-- Ultra-Optimized Particles.js Initialization -->
     <script defer>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (document.getElementById('particles-js')) {
-                // Reduced particle count and simplified configuration for better performance
-                particlesJS('particles-js', {
-                    "particles": {
-                        "number": {
-                            "value": 40, // Reduced from 80
-                            "density": {
-                                "enable": true,
-                                "value_area": 800
-                            }
-                        },
-                        "color": {
-                            "value": "#4361ee"
-                        },
-                        "shape": {
-                            "type": "circle",
-                            "stroke": {
-                                "width": 0,
-                                "color": "#000000"
-                            }
-                        },
-                        "opacity": {
-                            "value": 0.5,
-                            "random": false,
-                            "anim": {
-                                "enable": false
-                            }
-                        },
-                        "size": {
-                            "value": 3,
-                            "random": true,
-                            "anim": {
-                                "enable": false
-                            }
-                        },
-                        "line_linked": {
-                            "enable": true,
-                            "distance": 150,
-                            "color": "#4361ee",
-                            "opacity": 0.4,
-                            "width": 1
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 1.5,
-                            "direction": "none",
-                            "random": false,
-                            "straight": false,
-                            "out_mode": "out",
-                            "bounce": false
+        // Delay particles initialization for better initial page load
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                if (document.getElementById('particles-js')) {
+                    // Check device type and performance capabilities
+                    const isMobile = window.innerWidth <= 992;
+                    const isLowEnd = navigator.hardwareConcurrency <= 4 || navigator.deviceMemory <= 4;
+
+                    // Disable particles completely on low-end devices
+                    if (isLowEnd) {
+                        const particlesContainer = document.getElementById('particles-js');
+                        if (particlesContainer) {
+                            particlesContainer.style.display = 'none';
                         }
-                    },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "grab"
-                            },
-                            "onclick": {
-                                "enable": true,
-                                "mode": "push"
-                            },
-                            "resize": true
-                        },
-                        "modes": {
-                            "grab": {
-                                "distance": 140,
-                                "line_linked": {
-                                    "opacity": 1
+                        return;
+                    }
+
+                    // Ultra minimal configuration for all devices
+                    particlesJS('particles-js', {
+                        "particles": {
+                            "number": {
+                                "value": isMobile ? 8 : 20, // Extremely reduced
+                                "density": {
+                                    "enable": true,
+                                    "value_area": 1000
                                 }
                             },
-                            "push": {
-                                "particles_nb": 2
+                            "color": {
+                                "value": "#4361ee"
+                            },
+                            "shape": {
+                                "type": "circle",
+                                "stroke": {
+                                    "width": 0
+                                }
+                            },
+                            "opacity": {
+                                "value": 0.2,
+                                "random": false,
+                                "anim": {
+                                    "enable": false
+                                }
+                            },
+                            "size": {
+                                "value": isMobile ? 2 : 3,
+                                "random": true,
+                                "anim": {
+                                    "enable": false
+                                }
+                            },
+                            "line_linked": {
+                                "enable": !isMobile, // Disable lines on mobile
+                                "distance": 200,
+                                "color": "#4361ee",
+                                "opacity": 0.2,
+                                "width": 1
+                            },
+                            "move": {
+                                "enable": true,
+                                "speed": isMobile ? 0.5 : 1,
+                                "direction": "none",
+                                "random": false,
+                                "straight": false,
+                                "out_mode": "out",
+                                "bounce": false
                             }
-                        }
-                    },
-                    "retina_detect": false
-                });
-            }
+                        },
+                        "interactivity": {
+                            "detect_on": "canvas",
+                            "events": {
+                                "onhover": {
+                                    "enable": !isMobile // Disable hover effects on mobile
+                                },
+                                "onclick": {
+                                    "enable": false // Disable click effects for all devices
+                                },
+                                "resize": false // Disable resize handling for better performance
+                            }
+                        },
+                        "retina_detect": false
+                    });
+                }
+            }, 1000); // Delay initialization by 1 second
         });
     </script>
 </body>
