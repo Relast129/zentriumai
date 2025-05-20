@@ -395,55 +395,8 @@
 
 /* Responsive Styles */
 @media (max-width: 576px) {
-    .chatbot-container {
-        width: 90vw;
-        max-width: 320px;
-        height: 450px;
-        bottom: 70px;
-        right: 5vw;
-    }
-
-    .chatbot-toggle {
-        height: 50px;
-        padding: 0 20px;
-        right: 5vw;
-    }
-
-    .chatbot-label {
-        font-size: 0.9rem;
-    }
-
-    .message {
-        max-width: 90%;
-    }
-
-    .chatbot-input input {
-        font-size: 0.9rem;
-        padding: 10px 12px;
-    }
-
-    .chatbot-input button {
-        width: 36px;
-        height: 36px;
-    }
-
-    .suggested-responses {
-        max-width: 100%;
-        overflow-x: auto;
-        padding-bottom: 5px;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-    }
-
-    .suggested-responses::-webkit-scrollbar {
+    /* Hide the AI assistant on smaller screens */
+    .chatbot-widget {
         display: none;
-    }
-
-    .suggested-btn {
-        font-size: 0.8rem;
-        padding: 6px 10px;
-        white-space: nowrap;
     }
 }

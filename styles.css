@@ -8566,7 +8566,10 @@ html {
     }
 
     .stats-separator-vertical {
-        display: none;
+        width: 1px;
+        height: 25px;
+        background: linear-gradient(to bottom, transparent, rgba(79, 195, 247, 0.2), transparent);
+        margin: 0;
     }
 
     .stat-item {
@@ -8599,6 +8602,8 @@ html {
 
     .about-stats-container {
         max-width: 100%;
+        margin-top: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
     }
 
     /* Mission/Vision/Values section */
@@ -8898,6 +8903,7 @@ html {
     /* Enhanced Hero section for mobile */
     .hero {
         padding: var(--spacing-xl) 0;
+        padding-top: calc(var(--spacing-xl) + 28px); /* Add a little extra space between navbar and hero */
         position: relative;
         overflow: hidden;
         min-height: 100vh;
@@ -9148,24 +9154,27 @@ html {
     }
 
     .stats-grid {
-        flex-direction: column;
-        gap: var(--spacing-xs);
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .stat-item {
         flex: 1;
-        padding: var(--spacing-xs) var(--spacing-sm);
+        padding: var(--spacing-xs) var(--spacing-xxs);
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         text-align: left;
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xxs);
     }
 
     .stat-value-minimal {
         margin-bottom: 0;
-        margin-right: var(--spacing-sm);
-        min-width: 50px;
+        margin-right: var(--spacing-xxs);
+        min-width: 40px;
         font-size: 1.5rem;
+        text-align: right;
     }
 
     .stat-content-minimal {
@@ -9174,10 +9183,12 @@ html {
 
     .stat-title-minimal {
         font-size: 0.7rem;
+        margin-bottom: 0;
     }
 
     .stat-text-minimal {
         font-size: 0.65rem;
+        line-height: 1.2;
     }
 
     /* Enhanced About section for mobile */
@@ -10715,16 +10726,159 @@ html {
 
 /* Media query for minimal stats on mobile */
 @media (max-width: 768px) {
+    /* Vertical stats cards for mobile */
+    .about-stats {
+        padding: var(--spacing-sm);
+        margin: 0;
+        border-radius: var(--radius-sm);
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .stats-separator-vertical {
+        display: none;
+    }
+
+    .stat-item {
+        background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+        border-radius: var(--radius-md);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        border: 1px solid rgba(79, 195, 247, 0.15);
+        min-height: auto;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        opacity: 1; /* Ensure cards are visible */
+        transform: translateY(0); /* Reset any transform */
+    }
+
+    .stat-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--gradient-primary);
+        border-radius: 2px;
+    }
+
+    .stat-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40%;
+        height: 2px;
+        background: var(--gradient-primary);
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
     .stat-value-minimal {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        margin-right: var(--spacing-md);
+        min-width: 70px;
+        text-align: center;
+        position: relative;
+        padding: var(--spacing-xs);
+        background: rgba(79, 195, 247, 0.08);
+        border-radius: var(--radius-md);
+        box-shadow: 0 2px 8px rgba(79, 195, 247, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        height: 70px; /* Fixed height for consistency */
+        width: 70px; /* Fixed width for consistency */
+        flex-shrink: 0; /* Prevent shrinking */
+    }
+
+    .stat-content-minimal {
+        align-items: flex-start;
+        flex: 1;
+        padding-left: var(--spacing-md);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 70px; /* Match the height of stat-value-minimal */
     }
 
     .stat-title-minimal {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        position: relative;
+        display: inline-block;
+        transition: all 0.3s ease;
     }
 
     .stat-text-minimal {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: var(--text-light);
+        transition: all 0.3s ease;
+    }
+
+    .stat-item:hover, .stat-item:active {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 8px 20px rgba(79, 195, 247, 0.12), 0 2px 5px rgba(79, 195, 247, 0.05);
+        border-color: rgba(79, 195, 247, 0.25);
+    }
+
+    .stat-item:hover::after, .stat-item:active::after {
+        opacity: 1;
+        width: 60%;
+    }
+
+    .stat-item:hover .stat-value-minimal, .stat-item:active .stat-value-minimal {
+        background: rgba(79, 195, 247, 0.12);
+        transform: scale(1.03);
+        box-shadow: 0 4px 10px rgba(79, 195, 247, 0.15);
+    }
+
+    .stat-item:hover .stat-title-minimal, .stat-item:active .stat-title-minimal {
+        color: var(--primary);
+        transform: translateX(2px);
+    }
+
+    .stat-item:hover .stat-text-minimal, .stat-item:active .stat-text-minimal {
+        color: var(--text);
+    }
+
+    /* Add active state for touch devices */
+    @media (hover: none) {
+        .stat-item:active {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 8px 20px rgba(79, 195, 247, 0.12), 0 2px 5px rgba(79, 195, 247, 0.05);
+            border-color: rgba(79, 195, 247, 0.25);
+        }
+
+        .stat-item:active::after {
+            opacity: 1;
+            width: 60%;
+        }
+
+        .stat-item:active .stat-value-minimal {
+            background: rgba(79, 195, 247, 0.12);
+        }
+
+        .stat-item:active .stat-title-minimal {
+            color: var(--primary);
+        }
     }
 }
 
@@ -10740,6 +10894,53 @@ html {
         --spacing-md: 0.8rem;
         --spacing-sm: 0.5rem;
         --spacing-xs: 0.3rem;
+        --spacing-xxs: 0.2rem;
+    }
+
+    /* About stats adjustments for smallest screens */
+    .about-stats {
+        padding: var(--spacing-xxs);
+    }
+
+    .stat-item {
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-value-minimal {
+        font-size: 1.8rem;
+        min-width: 55px;
+        width: 55px;
+        height: 55px;
+        margin-right: var(--spacing-sm);
+        padding: var(--spacing-xxs);
+    }
+
+    .stat-content-minimal {
+        min-height: 55px;
+        padding-left: var(--spacing-sm);
+    }
+
+    .stat-title-minimal {
+        font-size: 0.85rem;
+    }
+
+    .stat-text-minimal {
+        font-size: 0.75rem;
+    }
+
+    .stat-item::before {
+        width: 3px;
+    }
+
+    .stat-item:hover, .stat-item:active {
+        transform: translateY(-1px) scale(1.005);
+        border-color: rgba(79, 195, 247, 0.2);
+    }
+
+    .stat-item:hover .stat-value-minimal, .stat-item:active .stat-value-minimal {
+        transform: scale(1.02);
     }
 
     /* Calendly widget adjustments for smallest screens */
